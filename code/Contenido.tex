@@ -24,7 +24,7 @@
 \end{bangenumerate}
 \subsection{Operación determinante}
 \begin{definition}
-    \textbf{Método de los Cofactores:} Sea $A$ una matriz de dimensiones $n \cdot n$, 
+    \textbf{Método de los Cofactores:} Sea $A$ una matriz de dimensiones $n \times n$, 
     podemos entonces calcular el determinante de $A$ ($\determinant(A)$ o $|A|$) como sigue.
     Definimos el cofactor de fila $i$ y columna $j$ como:
     \begin{equation*}
@@ -73,7 +73,7 @@
 
 \subsection{Operación inversa}
 \begin{definition}
-    Si $A$ es una matriz no nula de dimensión $n \cdot n$ entonces
+    Si $A$ es una matriz no nula de dimensión $n \times n$ entonces
     \begin{equation*}
         A^{-1}  = \frac{Adj(A)^{T}}{|A|},
     \end{equation*}
@@ -87,17 +87,17 @@
     \item $(A^T)^{-1} = (A^{-1})^T$
 \end{bangenumerate}
 
-\begin{theorem}
+\begin{teorema}
     Una matriz tiene inversa si y sólo si su determinante es distinto
     de cero
     \begin{equation*}
         \exists A^{-1} \Leftrightarrow |A| \neq 0
     \end{equation*}
-\end{theorem}
+\end{teorema}
 
 
 \subsection{Operación Trasposición}
-La trasposición de una matriz ($n \cdot m$), rectangular o cuadrada, es la
+La trasposición de una matriz ($n \times m$), rectangular o cuadrada, es la
 reflexión de los elementos respecto de su diagonal principal, adquiriendo
 la forma ($m \cdot n$).
 \begin{equation*}
@@ -126,14 +126,14 @@ la forma ($m \cdot n$).
     Sea $ \bm{X} = \{ \bm{x_1, x_2} ,\dots, \bm{x_n} \}$ un conjunto de 
     vectores que pertenece a un cierto espacio vectorial.
     \begin{equation*}
-        \bm{v} = \alpha_1 \cdot \bm{x_1} + \alpha_2 \cdot \bm{x_2} + \dots + \alpha_n \cdot \bm{x_n}    
+        \bm{v} = \alpha_1 \cdot \bm{x_1} + \alpha_2 \cdot \bm{x_2} + \dots + \alpha_n \times \bm{x_n}    
     \end{equation*}
     Se dice que $\bm{v}$ es \textit{Combinación Lineal} del conjunto $\bm{X}$.
 \end{definition}
 \begin{definition}
     Si la única solución a la combinación del vector nulo,
     \begin{equation*}
-        \bm{0} = \alpha_1 \cdot \bm{x_1} + \alpha_2 \cdot \bm{x_2} + \dots + \alpha_n \cdot \bm{x_n} \;,
+        \bm{0} = \alpha_1 \cdot \bm{x_1} + \alpha_2 \cdot \bm{x_2} + \dots + \alpha_n \times \bm{x_n} \;,
     \end{equation*}
     es $\alpha_i = 0$, entonces se dice que el conjunto $\bm{X}$ está compuesto
     por vectores \textit{Linealmente Independientes}.\\
@@ -143,7 +143,7 @@ la forma ($m \cdot n$).
 \begin{obs}
     Por consecuencia
     \begin{equation*}
-       \exists \; \alpha_i / \;\; \bm{x_k} = \alpha_1 \cdot \bm{x_1} + \alpha_2 \cdot \bm{x_2} + \dots + \alpha_n \cdot \bm{x_n}\; , \;\; \bm{x_k} \in X   
+       \exists \; \alpha_i / \;\; \bm{x_k} = \alpha_1 \cdot \bm{x_1} + \alpha_2 \cdot \bm{x_2} + \dots + \alpha_n \times \bm{x_n}\; , \;\; \bm{x_k} \in X   
     \end{equation*}
     entonces $X$ es un conjunto de vectores \textit{Linealmente Dependientes.}\\
     De esto también se desprende que $\bm{0}$ no puede ser parte de un conjunto
@@ -159,4 +159,137 @@ la forma ($m \cdot n$).
     \end{enumerate}
 \end{definition}
 
+\subsection{Transformación Lineal}
+Queremos enconrtar una matriz $A$ que al multiplicarla por las coordenadas de un
+vector $\bm{v}$ en la base $B_1$ ([$\bm{v}]_{B1}$) de como resultado el transformado de
+dicho vector escrito en base $B_2$. Es decir:
+\begin{equation*}
+    [T(\bm{v})]_{B2} = \bm{A} \cdot [\bm{v}]_{B1}
+\end{equation*}
+donde $T: V \rightarrow W$ tal que $B_1$ es base de $V$ y $B_2$ es base de $W$
 
+\begin{teorema}
+    Sean $V$ y $W$ espacios vectoriales de dimensión finita. Supongamos $B_1$
+    base de $V$ y $B_2$ base de $W$. Existe una \textbf{única} matriz $A \in M_{n\times n}(\mathbb{R})$ tal que:
+    \begin{equation}
+        \label{eqn: matrizTransformación}
+        [T(\bm{v})]_{B2} = \bm{A} \cdot [\bm{v}]_{B1}
+    \end{equation}
+    donde $A$ se suele notar como [$T]_{B1\rightarrow B2}$
+\end{teorema}
+Para obtener esta matriz sólamente necesitamos calcular los tranformados
+de la base $B_1 = \{ \bm{v_1} \bm{v_2}$ \dots $\bm{v_n}\}$
+\begin{equation}
+    \bm{A} = [T]_{B1\rightarrow B2} = 
+    \begin{bmatrix}
+    \uparrow & \uparrow &  & \uparrow\\
+    [T(\bm{v_1})]_{B2} & [T(\bm{v_2})]_{B2} & \dots & [T(\bm{v_n})]_{B2}\\
+    \downarrow & \downarrow &  & \downarrow\\
+    \end{bmatrix}
+\end{equation}
+Esta matriz toma vectores en base $B_1$ los transforma y devuelve sus coordenadas
+en base $B_2$.\\
+
+\begin{teorema}
+    Sean $V$ y $W$ espacios vectoriales de dimensión finita. Sean
+    $B_1$ y $B_{1'}$ dos bases de V, y $B_2$ y $B_{2'}$ dos bases 
+    de W, donde $T: V \rightarrow W$, entonces
+    \begin{equation}
+        \label{eqn:camino}
+        [T]_{B_{1'} \rightarrow B_{2'}} = [B_2]_{B_{2'}} \;
+        [T]_{B_{1} \rightarrow B_{2}} \; [B_{1'}]_{B_1} 
+    \end{equation}
+\end{teorema}
+
+
+\vspace*{2pt}
+
+Observemos que por lo tanto, si llamo $\bm{\tilde{A}} = [T]_{B_{1'} \rightarrow B_{2'}}$
+entonces podemos escribir (\ref*{eqn:camino}) como
+\begin{equation}
+    \bm{\tilde{A}} = [B_2]_{B_{2'}} \cdot \bm{A} \cdot [B_{1'}]_{B_1} 
+\end{equation}
+
+\vspace*{3pt}
+
+\begin{example}
+    Sea $T: \mathbb{R}^3 \rightarrow \mathbb{R}^3 / \; \; T(x, y, z) = (x+y, z)$.
+    Si $B = {(1,0,2);(0,2,1);(0,0,3)}$ es una base de $\mathbb{R}^3$, hallar $[T]_{B \rightarrow C}$ (siendo C la base canonica)
+    y $[T( \bm{v})]_C$
+
+    \vspace*{5pt}
+
+    Sabemos que
+    \begin{equation*}
+        [T]_{B \rightarrow C} = 
+        \begin{bmatrix}
+            \uparrow & \uparrow &  \uparrow\\
+            [T(1,0,2)]_{C} & [T(0,2,1)]_{C} & [T(0,0,3)]_{C}\\
+            \downarrow & \downarrow &  \downarrow\\
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+        1 & 2 & 0\\
+        2 & 1 & 3\\
+        \end{bmatrix}
+    \end{equation*} 
+
+    Luego utilizando la matriz hallada podemos obtener el vector transformado en base
+    canonica
+    \begin{equation*}
+        \begin{split}
+            [T(\bm{v})]_C = [T]_{B \rightarrow C} \cdot [\bm{v}]_C \\
+            [T(\bm{v})]_C = (5, 4) 
+        \end{split} 
+    \end{equation*}
+    que puede ser verificado buscando $T(\bm{v})$.
+\end{example}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Autovalores y Autovectores}
+\begin{definition}
+    Para una matriz $ \bm{A} $, un vector no nulo $ \bm{x}$ se dice que 
+    es un autovector de $ \bm{A}$ si
+    \begin{equation*}
+        \bm{A} \cdot \bm{x} = \lambda \bm{x} 
+    \end{equation*}
+\end{definition}
+\begin{obs}
+    Si partimos de la definición
+    \begin{equation*}
+        \bm{A} \bm{x} = \lambda \bm{x}
+    \end{equation*}
+    entonces podemos operar de la siguiente forma
+    \begin{equation*}
+        4 = 4
+    \end{equation*}
+\end{obs}
+
+\begin{obs}
+    Podemos ver de la definición que los autovectores no son únicos, ya que
+    si $\bm{x}$ es un autovector, entonces $\alpha\bm{x}$ también lo es.
+\end{obs}
+
+\begin{teorema}
+    Si $\lambda$ es un autovalor de $A$ entonces $\alpha + \lambda$ es 
+    un autovalor de $\alpha I + A$
+\end{teorema}
+
+\begin{definition}
+    Sea $A$ una matriz de $n \times n$, y $T$ una matriz no singular también
+    de $n \times n$, y sea $\tilde{A} = T \; A \; T^{-1} $, entonces $A$ y $\tilde{A}$
+    se dicen \textit{matrices semejantes}. Están relacionadas por la matriz de 
+    semejanza $T$.
+\end{definition}
+
+\vspace*{1pt}
+
+\begin{teorema}
+    Dos matrices semejantes tienen los mismos autovalores
+\end{teorema}
+
+\begin{example}[]
+    Supongamos que tenemos 
+\end{example}
