@@ -214,8 +214,8 @@ entonces podemos escribir (\ref*{eqn:camino}) como
 
 \begin{example}
     Sea $T: \mathbb{R}^3 \rightarrow \mathbb{R}^3 / \; \; T(x, y, z) = (x+y, z)$.
-    Si $B = {(1,0,2);(0,2,1);(0,0,3)}$ es una base de $\mathbb{R}^3$, hallar $[T]_{B \rightarrow C}$ (siendo C la base canonica)
-    y $[T( \bm{v})]_C$
+    Si $B = \{(1,0,2);(0,2,1);(0,0,3)\}$ es una base de $\mathbb{R}^3$, hallar $[T]_{B \rightarrow C}$ (siendo C la base canonica)
+    y $[T( \bm{v})]_C$ siendo $[\bm{v}]_B = [1,2,0]$
 
     \vspace*{5pt}
 
@@ -238,14 +238,12 @@ entonces podemos escribir (\ref*{eqn:camino}) como
     canonica
     \begin{equation*}
         \begin{split}
-            [T(\bm{v})]_C = [T]_{B \rightarrow C} \cdot [\bm{v}]_C \\
+            [T(\bm{v})]_C = [T]_{B \rightarrow C} \cdot [\bm{v}]_B \\
             [T(\bm{v})]_C = (5, 4) 
         \end{split} 
     \end{equation*}
     que puede ser verificado buscando $T(\bm{v})$.
 \end{example}
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Autovalores y Autovectores}
@@ -257,15 +255,32 @@ entonces podemos escribir (\ref*{eqn:camino}) como
     \end{equation*}
 \end{definition}
 \begin{obs}
-    Si partimos de la definición
+    Si partimos de la definición entonces podemos operar de la siguiente forma
     \begin{equation*}
-        \bm{A} \bm{x} = \lambda \bm{x}
+        \begin{split}
+            \bm{0} &= \lambda \bm{x} - \bm{A} \bm{x}\\
+            \bm{0} &= (\lambda \bm{I} - \bm{A})\cdot \bm{x}\\
+        \end{split}
     \end{equation*}
-    entonces podemos operar de la siguiente forma
-    \begin{equation*}
-        4 = 4
-    \end{equation*}
+    y como $\bm{x}$ es no nulo, el sistema tiene una solución no trivial, por lo que
+    \begin{equation}
+        \label{eqn:autovalores}
+        | \lambda \bm{I} - \bm{A} | = 0
+    \end{equation}
+    donde el determinante se llama \textit{polinomio carácteristico}, y es un polinomio
+    mónico de orden $n$. 
 \end{obs}
+
+\begin{definition}
+    Si $A \in M_n(\mathbb{R})$ entonces:
+    \begin{bangenumerate}
+        \item! $\lambda$ es autovalor de $A \Leftrightarrow P(\lambda)=  | \lambda \bm{I} - \bm{A} | = 0$
+        es decir, los autovalores son las raices del polinomio característico.
+        \item! Si $\lambda$ es autovalor de $A \Rightarrow$ las soluciones no nulas
+        del sistema homogeneo $(\bm{A}-\lambda \bm{I})\bm{x}=\bm{0}$ son los
+        autovectores asociados a $\lambda$
+    \end{bangenumerate}
+\end{definition}
 
 \begin{obs}
     Podemos ver de la definición que los autovectores no son únicos, ya que
@@ -284,12 +299,57 @@ entonces podemos escribir (\ref*{eqn:camino}) como
     semejanza $T$.
 \end{definition}
 
-\vspace*{1pt}
-
 \begin{teorema}
     Dos matrices semejantes tienen los mismos autovalores
 \end{teorema}
 
+\begin{obs}
+    Como toda \textit{TL} $T:V\rightarrow V$ tiene asociada una matriz ($[T]_B$),
+    las definiciones de autovalores y autovectores también las podemos aplicar a una matriz.
+\end{obs}
+\vspace*{1pt}
+
 \begin{example}[]
-    Supongamos que tenemos 
+    Sea $B$ una matriz triángular de orden $3\times 3$ genérica, buscar sus
+    autovalores y autovectores:
+    \vspace*{5pt}
+    Si llamamos
+    \begin{equation*}
+        B = 
+        \begin{bmatrix}
+        a & b & c\\
+        0 & e & f\\
+        0 & 0 & i\\
+        \end{bmatrix}
+    \end{equation*}
+    entonces el polinomio característico queda definido por 
+    $P(\lambda) = (\lambda - a)\cdot (\lambda - e) \cdot (\lambda - i)$ por lo tanto
+    los autovalores de la matriz B son $\{a, e, i\}$
+
+    Luego podemos obtener los autovectores planteando lo siguiente
+    \begin{equation*}
+        \begin{split}
+            (\bm{B} - \lambda \bm{I}) \bm{x} &= \bm{0} \\
+            \begin{bmatrix}
+            a-\lambda & b & c\\
+            0 & e-\lambda & f\\
+            0 & 0 & i-\lambda\\
+            \end{bmatrix} \cdot
+            \begin{bmatrix}
+            x_1\\
+            x_2\\
+            x_3\\
+            \end{bmatrix} &= \bm{0}
+        \end{split}
+    \end{equation*}
+    por lo que obtenemos el siguiente sistema
+    \begin{equation}
+        \begin{cases}
+            (a-\lambda)\cdot x_1 + b\cdot x_2 + c \cdot x_3 &= 0\\
+            (e-\lambda)\cdot x_2 + f \cdot x_3 &= 0\\
+            (i-\lambda)\cdot x_3 &=0 \\
+        \end{cases}
+    \end{equation}
+    que define al espacio de autovectores asociado al autovalor lambda.
+
 \end{example}
