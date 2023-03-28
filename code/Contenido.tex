@@ -13,6 +13,15 @@
 %Comienzo de contenido
 
 \section{Matrices}
+\begin{definition}
+    El rango de una matriz $A$ de $m \cdot n$ es igual al $min(m, n)$.
+\end{definition}
+\textbf{Propiedades de la multiplicación:}
+\begin{bangenumerate}
+    \item $(AB)C = A(BC)$
+    \item $A(B+C)= AB + AC$
+    \item! $AB \neq BA$, en general
+\end{bangenumerate}
 \subsection{Operación determinante}
 \begin{definition}
     \textbf{Método de los Cofactores:} Sea $A$ una matriz de dimensiones $n \cdot n$, 
@@ -113,3 +122,41 @@ la forma ($m \cdot n$).
 
 \newpage
 \section{Espacios Vectoriales y Transformaciones Lineales}
+\begin{definition}
+    Sea $ \bm{X} = \{ \bm{x_1, x_2} ,\dots, \bm{x_n} \}$ un conjunto de 
+    vectores que pertenece a un cierto espacio vectorial.
+    \begin{equation*}
+        \bm{v} = \alpha_1 \cdot \bm{x_1} + \alpha_2 \cdot \bm{x_2} + \dots + \alpha_n \cdot \bm{x_n}    
+    \end{equation*}
+    Se dice que $\bm{v}$ es \textit{Combinación Lineal} del conjunto $\bm{X}$.
+\end{definition}
+\begin{definition}
+    Si la única solución a la combinación del vector nulo,
+    \begin{equation*}
+        \bm{0} = \alpha_1 \cdot \bm{x_1} + \alpha_2 \cdot \bm{x_2} + \dots + \alpha_n \cdot \bm{x_n} \;,
+    \end{equation*}
+    es $\alpha_i = 0$, entonces se dice que el conjunto $\bm{X}$ está compuesto
+    por vectores \textit{Linealmente Independientes}.\\
+    En otras palabras, se dice que un conjunto de vectores son linealmente independientes si ningún vector del conjunto
+    puede ser escrito como combinación lineal del resto.
+\end{definition}
+\begin{obs}
+    Por consecuencia
+    \begin{equation*}
+       \exists \; \alpha_i / \;\; \bm{x_k} = \alpha_1 \cdot \bm{x_1} + \alpha_2 \cdot \bm{x_2} + \dots + \alpha_n \cdot \bm{x_n}\; , \;\; \bm{x_k} \in X   
+    \end{equation*}
+    entonces $X$ es un conjunto de vectores \textit{Linealmente Dependientes.}\\
+    De esto también se desprende que $\bm{0}$ no puede ser parte de un conjunto
+    de vectores linealmente independientes.
+\end{obs} 
+
+\begin{definition}
+    Sea $S$ un subespacio de $V$, y sea $B = \{ \bm{b_1 b_2} $ \dots $\bm{b_m} \}$.
+    Luego B es una \textbf{base de S} si:
+    \begin{enumerate}
+        \item $\bm{b_1 b_2}$ \dots $\bm{b_m}$ son linealmente independientes.
+        \item $\bm{b_1 b_2}$ \dots $\bm{b_m}$ generan al subespacio $S$.
+    \end{enumerate}
+\end{definition}
+
+

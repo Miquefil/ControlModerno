@@ -30,6 +30,7 @@
 
 \usepackage{amssymb} %simbolos matematicos especiales
 \usepackage{csquotes}
+\usepackage{bm}
 
 
 %Tikz
@@ -96,6 +97,16 @@ bodyfont=\normalfont,
 postheadspace=0.5em]%
 {theo}
 \declaretheorem[name=Teorema, numbered=yes, style=theo]{theorem}
+
+%OBSERVACIÓN - environment
+\declaretheoremstyle[%
+spaceabove=6pt, spacebelow=6pt,
+headfont=\normalfont\bfseries\color{red!80!black}, headindent=\parindent,
+notefont=\mdseries, notebraces={(}{)},
+bodyfont=\normalfont,
+postheadspace=0.5em]%
+{obs}
+\declaretheorem[name=\underline{\# Observación}, numbered=no, style=obs]{obs}
 
 
 %FORMATEO DE TITULOS Y SECCIONES
