@@ -1,7 +1,17 @@
-\documentclass[11pt,letterpaper]{article}
+%\documentclass[12pt,letterpaper]{article}
+\documentclass[12pt, a4paper, twoside]{article}
 
+\usepackage{blindtext}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
 
-%Paquetes
+ 
+%Paquetes   
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[table,xcdraw]{xcolor}
@@ -226,6 +236,7 @@ postheadspace=0.5em]%
     %\tableofcontents
     \newpage
     \include{Contenido.tex}
+    
    
 
 \end{document}
