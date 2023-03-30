@@ -353,3 +353,114 @@ entonces podemos escribir (\ref*{eqn:camino}) como
     que define al espacio de autovectores asociado al autovalor lambda.
 
 \end{example}
+
+\newpage
+\section{Espacio de estados y modelos de función transferencia}
+
+\begin{definition}
+    Sea un sistema de segundo orden
+    \begin{equation*}
+        G (s) = \dfrac{\omega_n^2}{s^2 + 2 \xi \omega_n \cdot s + \omega_n ^2}
+    \end{equation*}
+    se definen las siguientes cantidades:
+\end{definition}
+\begin{bangenumerate}
+    \item! \; \; $0 < \textbf{$\xi$} \leq 1 $: Relación de amortiguamiento
+    \item! \; \; $\sigma = \xi \omega_n$ : Parte real del par de polos
+    \item \; \; $\omega_d = \omega_n \sqrt{1- \xi ^2}$ : Parte imaginaria del par de polos
+    \item \; \; $s_{1,2} = \sigma \pm j \omega_d$ : Par de polos 
+\end{bangenumerate}
+
+\vspace*{5pt}
+La respuesta temporal al escalón de este sistema es descripto por
+
+%
+\noindent
+\begin{minipage}{0.4\linewidth}
+    \raggedleft
+    \begin{equation*}
+        y(t) = 1 - \; e^{-\sigma t } \cdot ( \cos{\omega_d t} + \dfrac{\sigma}{\omega_d}\sin{\omega_d t}) 
+    \end{equation*}
+    \textbf{Reglas para sistemas de 2do O:}
+    \begin{bangenumerate}
+        \item \; $Ts = \dfrac{4.5}{\sigma}$
+        \item \; $ M_p = 100\% \; exp(\dfrac{-\pi \xi}{\sqrt{1-\xi^2}})$
+    \end{bangenumerate}
+    \vfill
+\end{minipage}% <------- USAR PARA TENER MINIPAGES SIDE TO SIDE
+\begin{minipage}{0.4\linewidth}
+    \raggedright
+    \begin{tikzpicture}
+        \begin{axis}[
+                width=9cm,
+                height=6cm,
+                axis lines=middle,
+                xmin=0, xmax=15,
+                ymin=0, ymax=1.5,
+                xlabel=$t$,
+                ylabel={$y(t)$},
+                xlabel style={at=(current axis.right of origin), anchor=west},
+                ylabel style={at=(current axis.above origin), anchor=south},
+                xtick={},
+                xticklabels={},
+                every x tick/.style={black},
+                ytick={0, 1, 1.3714},
+                yticklabels={$0$, $1$, $M_p$},
+                every y tick/.style={black}
+            ]
+            \addplot[black, densely dotted] coordinates{(3.2236,1.3714)} -- (axis cs:0,1.3714);
+            \addplot[black, densely dotted] coordinates{(3.2236,1.3714)} -- (axis cs:3.2236,0);
+            %
+            \addplot[black, dashed] coordinates{(15,1)} -- (axis cs:0,1);
+            %
+            
+            %
+            \addplot[smooth, 
+                        black,
+                        thick,
+                        mark=none,
+                        domain=0:12.4,
+                        samples=100]
+            {1-exp(-0.3*x)*(cos(deg(sqrt(1-0.3^2)*x))+0.3/(sqrt(1-0.3^2))*sin(deg(sqrt(1-0.3^2)*x)))};
+            %
+            \addplot[black, thick] coordinates{(15,0.9872)} -- (axis cs:12.4,0.9872);
+            %
+            \coordinate (trleft) at (axis cs:0,0);
+            \coordinate (trright) at (axis cs:1.96605,0);
+            %
+            \coordinate (tr1left) at (axis cs:0.4726,0);
+            \coordinate (tr1right) at (axis cs:1.79398,0);
+            %
+            \coordinate (ess1) at (axis cs:14,1.1);
+            \coordinate (ess2) at (axis cs:14,1);
+            \coordinate (ess3) at (axis cs:14,0.9872);
+            \coordinate (ess4) at (axis cs:14,0.8872);
+        \end{axis}
+    
+        \draw [->] (ess1) node [right] {$\Delta$} -- (ess2);
+        \draw [<-] (ess3) -- (ess4);
+    
+    \end{tikzpicture} 
+\end{minipage}%
+
+Ahora queremos encontrar un modelo de función transferencia discreta que imite
+el modelo de tiempo continuo. Por lo tanto, definimos:
+\begin{equation*}
+    y[k] = y[kT] = 1 - (\underbrace{e^{-\sigma T}}_{a})^k \; (\cos{k\overbrace{\omega_d T}^{b} + \dfrac{\sigma}{\omega_d}\sin{\omega_d kT}})
+\end{equation*}
+
+\begin{center}
+    \begin{empheq}[box=\widefbox]{align}
+        \textbf{Tabla de transformada $\mathcal{Z}$:}\\
+    \end{empheq}
+\end{center}
+
+
+
+    
+
+
+
+
+
+
