@@ -445,19 +445,220 @@ La respuesta temporal al escalón de este sistema es descripto por
 
 Ahora queremos encontrar un modelo de función transferencia discreta que imite
 el modelo de tiempo continuo. Por lo tanto, definimos:
-\begin{equation*}
+\begin{equation}
+    \label{eqn: RtaEscalonDiscreta}
     y[k] = y[kT] = 1 - (\underbrace{e^{-\sigma T}}_{a})^k \; (\cos{k\overbrace{\omega_d T}^{b} + \dfrac{\sigma}{\omega_d}\sin{\omega_d kT}})
-\end{equation*}
+\end{equation}
 
 \begin{center}
-    \begin{empheq}[box=\widefbox]{align}
-        \textbf{Tabla de transformada $\mathcal{Z}$:}\\
-    \end{empheq}
+    \boxed{
+        \begin{tabular}{ccc}
+            \textbf{Secuencia}&$\longrightarrow $& \textbf{Transformada $\mathcal{Z}$} \\
+            $a^k \sin{bk}$ && $\dfrac{az\sin{b}}{z^2-2az\cos{b}+a^2}$ \\
+            &&\\
+            $a^k \cos{bk}$ && $\dfrac{z(z-a\cos{b})}{z^2-2az\cos{b}+a^2}$ \\            
+            \end{tabular}
+    }
 \end{center}
 
+Donde la transformada buscada es 
+\begin{equation*}
+    \mathcal{Z} \{y[k]\} = \underbrace{\dfrac{z}{z-1}}_{\text{$\mathcal{Z}\{ u(t)\}$}} \cdot G(z)
+\end{equation*}
+
+Luego aplicando Transformada $\mathcal{Z}$ a la ecuación (\ref*{eqn: RtaEscalonDiscreta}) obtenemos
+\begin{equation}
+    \begin{split}
+        \mathcal{Z} \{y(k)\} = Y(z) &= \dfrac{z}{z-1} - z\cdot [\dfrac{\overbrace{z-a\cos(\omega_d T)}^{\text{$\eta_1(z)$}} }{z^2-2e^{-\sigma T}z \cos{\omega_d T}+e^{-2\sigma T}} + \dfrac{\sigma}{\omega_d}\dfrac{\overbrace{a\sin{\omega_d T}}^{\eta_2(z)}}{\Delta(z^2)}] \\
+        &= \dfrac{z}{z-1} \underbrace{\dfrac{N(z)}{(z^2-2az\cos{\omega_d T}+a^2 )}}_{\text{$G(z)$}}
+    \end{split}
+\end{equation}
+
+por lo tanto, los polos del sistema muestreado son
+\begin{equation*}
+    z^2 - 2az \cos{\omega_d T} + a^2
+\end{equation*}
+
+donde
+\begin{equation}
+    \begin{split}
+        z_{1,2} &= a \cos{\omega_d T} \pm ja\sqrt{1-\cos^2{\omega_d T}} \\
+        &= (e^{-\sigma T})\cdot (e^{\pm j\omega_d T})\\[10pt]
+        |z_{1,2}| &= e^{-\sigma T}
+    \end{split}  
+\end{equation}
+Es decir que la parte real de los polos en el plano "s" controla la magnitud
+de los polos en el plano "z".
+
+\begin{example}
+    Sea \(G(s)= \dfrac{4}{s^2+3\cdot 2s+4}\), entonces \(\xi = 0.8, \; \omega_n = 2, \; T_s = 4.5/1.6 \simeq 2.8seg, \; M_p = 1.5\% \)
+    \\ \\
+    $s_{1,2} = -1.6 \pm j1.2$
+
+    Elijamos como periodo $T=0.2$seg, es decir, tendriamos 14 muestras hasta el tiempo de establecimiento $T_s$. \\
+    \\ \\
+    \(z_{1,2} = e^{s_{1,2} T} = 0.7053 \pm j 0.1726 \) \\ \\
 
 
-    
+    \begin{figure}[H]
+        \centering
+        \begin{subfigure}{0.4\textwidth}
+            \centering
+            \resizebox{\linewidth}{!}{
+            \begin{tikzpicture}
+                %\draw[gray, very thin] (0,0) grid (7,5);
+                \begin{axis}[
+                xmin = -2, xmax=1,
+                ymin = -1.5, ymax=1.5,
+                grid = both,
+                %grid style = {line width = .1pt, draw = gray},
+                xlabel={\text{$Re(s)$}},
+                ylabel={\text{$Im(s)$}}]
+                    %\addplot[domain=0:0.5, color=red] {0};
+                    %\addplot[domain=0.6:1,color=red]{0};
+                    \addplot+[only marks] coordinates {(-1.6,1.2) (-1.6,-1.2)};
+                \end{axis}             
+            \end{tikzpicture}
+            }
+        \end{subfigure}% <---- Importante ese (%) para indicar salto de pag
+        \begin{subfigure}{0.4\textwidth}
+            \centering
+            \resizebox{\linewidth}{!}{
+            \begin{tikzpicture}
+                 \begin{axis}[
+                  xmin = -2, xmax=1,
+                  ymin = -1.5, ymax=1.5,
+                  grid = both,
+                  %grid style = {line width = .1pt, draw = gray},
+                  xlabel={\text{$Re(z)$}},
+                  ylabel={\text{$Im(z)$}}]
+                     %\addplot[domain=0:0.5, color=red] {0};
+                     %\addplot[domain=0.6:1,color=red]{0};
+                     \addplot+[only marks] coordinates {(-0.7053,-0.1726) (-0.7053,0.1726)};
+                 \end{axis}             
+            \end{tikzpicture}
+            }
+        \end{subfigure}
+    \end{figure}
+\end{example}
+
+\subsection{Forma Canónica Observable}
+En esta sección vamos a buscar las matrices de control estándar para una ecuación
+diferencial general, que puede contemplar distintos aspectos respecto a su forma de construirse. 
+En el caso general las ecuaciones de estado se describen como
+\begin{equation}
+    \text{\underline{Caso Contínuo:}}
+    \begin{cases}
+        \; \dot{\bm{x}} &= \bm{A} \; \bm{x} + \bm{b} \; u(t) \\
+        \; y(t) &= \bm{c} \;\bm{x} + \bm{d} \; u(t) \\
+    \end{cases}%
+    \hspace*{15pt}
+    \text{\underline{Caso Discreto:}}    
+    \begin{cases}
+        \; \bm{x}[k+1] &= \bm{A} \; \bm{x}[k] + \bm{b} \; u[k] \\
+        \; y[k] &= \bm{c} \;\bm{x}[k] + \bm{d} \; u[k] \\
+    \end{cases}
+\end{equation}
+Si partimos de la ecuación diferencial
+\begin{equation*}
+    y^{(n)}(t) + a_1 y^{(n-1)}(t) + \cdots + a_n y(t) = b_0 u^{n}(t) + b_1 u^{(n-1)}(t) + \cdots + b_n u(t)
+\end{equation*}
+cuya función de transferencia es
+\begin{equation*}
+    H(s) = \dfrac{Y(s)}{U(s)} = \dfrac{b_0 s^n + b_1 s^{n-1} + \cdots + b_n}{s^n + a_1 s^{n-1} + \cdots + a_n}
+\end{equation*}
+tiene las siguientes matrices de estados, llamadas \textbf{de observabilidad} (anotado con un sub-cero).
+\begin{equation*}
+    \bm{A_o} = 
+    \begin{bmatrix}
+    -a_1 & 1 & 0 & 0 & \cdots & 0\\
+    -a_2 & 0 & 1 & 0 & \cdots & 0\\
+    -a_3 & 0 & 0 & 1 & \cdots & 0\\
+    \vdots & \vdots & \vdots & \vdots & \ddots & \vdots \\
+    -a_{n-1} & 0 & 0 & 0 & \cdots & 1\\
+    -a_{n} & 0 & 0 & 0 & \cdots & 0 \\
+    \end{bmatrix}
+    \hspace*{10pt}
+    \bm{b_o} = 
+    \begin{bmatrix}
+    b_1 - a_1\; b_0 \\
+    b_2 - a_2\; b_0 \\
+    b_3 - a_3\; b_0 \\
+    \vdots \\
+    b_n - a_n\; b_0 \\
+    \end{bmatrix}
+    \hspace*{5pt}
+    \bm{c:o} = 
+    \begin{bmatrix}
+    1 & 0 & \cdots & 0
+    \end{bmatrix}
+    \hspace*{5pt}
+    \bm{d_o} = b_0
+\end{equation*}
+
+\subsection{Forma Canónica de Controlabilidad}
+Sea la ecuación a diferencias que \textit{no tiene retardos de la entrada}, se puede
+representar de la siguiente forma
+\begin{equation}
+    w[k]  = a_1 w[k-1] - a_2 w[k-2] \cdots a_n w[k-n] + u[k]
+\end{equation}
+
+su transformada $\mathcal{Z}$ es
+\begin{equation*}
+    \dfrac{W(z)}{U(z)} = \dfrac{1}{1 + a_1 z^{-1} + \cdots + a_n z^{-n}} = \dfrac{1}{A(z)}
+\end{equation*}
+
+luego recordemos la ecuación a diferencias más general
+\begin{equation*}
+    y[k] + a_1 y[k-1] + \cdots + a_n y[k-n] = b_0 u[k] + \cdots + b_n u[k-n]
+\end{equation*}
+
+que tiene como ecuación transformada
+
+\begin{equation*}
+    \dfrac{Y(z)}{U(z)} = \dfrac{b_0 + b_1 z^{-1} + \cdots + b_n z^{-n}}{1 + a_1 z^{-1} + \cdots + a_n z^{-n}} = \dfrac{B(z)}{A(z)} 
+\end{equation*}
+
+\begin{obs}
+    La ecuación diferencial general que se plantea en la forma canónica de controlabilidad
+    y aquella en la forma canónica de observabilidad tienen los indices de los coeficientes invertidos.
+\end{obs}
+que resultan en las siguientes matrices de control
+\begin{equation*}
+    \bm{A_o} = 
+    \begin{bmatrix}
+    -a_1 & -a_2 & -a_3 & \cdots & -a_{n-1} & -a_n\\
+    1 & 0 & 1 & 0 & \cdots & 0\\
+    0 & 1 & 0 & 1 & \cdots & 0\\
+    \vdots & \vdots & \ddots & \vdots & \vdots & \vdots \\
+    0 & 0 & 0 & 1 & 0 & 0\\
+    0 & 0 & 0 & \cdots & 1 & 0 \\
+    \end{bmatrix}
+    \hspace*{10pt}
+    \bm{b_o} = 
+    \begin{bmatrix}
+    1 \\
+    0 \\
+    0 \\
+    \vdots \\
+    0\\
+    \end{bmatrix}
+    \hspace*{5pt}
+    \bm{c:o} = 
+    \begin{bmatrix}
+    b_1 - a_1\; b_0 & b_2 - a_2\; b_0 & \cdots & b_n - a_n\; b_0
+    \end{bmatrix}
+    \hspace*{5pt}
+    \bm{d_o} = b_0
+\end{equation*}
+
+
+
+
+
+
+
+
 
 
 

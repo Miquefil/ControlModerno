@@ -41,9 +41,6 @@
 \usepackage{csquotes}
 \usepackage{bm}
 
-\usepackage{empheq}
-\newcommand*\widefbox[1]{\fbox{\hspace{2em}#1\hspace{2em}}}
-
 \usepackage{MnSymbol}
 
 
@@ -53,7 +50,8 @@
 \pgfplotsset{compat = newest}
 \usepackage{tikz}
 
-
+%simbolos Real e imaginario
+\usepackage{physics}
 % EJEMPLOS declaración de environment
 % 
 \newcounter{testexample}
@@ -71,7 +69,7 @@
     colback=blue!5!white,
     sharp corners,
         frame style={%ESTO ES PARA QUITARLE EL MARCO
-            color=blue!5!white,
+            color=blue!10!white,
         },
     title={\exampletext: #1},% use \thetcbcounter to access the testexample counter text
     % Attaching a box requires an overlay

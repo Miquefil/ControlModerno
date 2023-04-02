@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.12)  30 MAR 2023 00:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.12)  2 APR 2023 19:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -707,53 +707,6 @@ Package bm Info: No bold for \OMX/cmex/m/n, using \pmb.
 Package bm Info: No bold for \U/msa/m/n, using \pmb.
 Package bm Info: No bold for \U/msb/m/n, using \pmb.
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
-) (c:/texlive/2022/texmf-dist/tex/latex/mathtools/empheq.sty
-Package: empheq 2017/03/31 v2.15 Emphasizing equations
- (c:/texlive/2022/texmf-dist/tex/latex/mathtools/mhsetup.sty
-Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
-) (c:/texlive/2022/texmf-dist/tex/latex/mathtools/mathtools.sty
-Package: mathtools 2022/06/29 v1.29 mathematical typesetting tools
- (c:/texlive/2022/texmf-dist/tex/latex/tools/calc.sty
-Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count359
-\calc@Bcount=\count360
-\calc@Adimen=\dimen318
-\calc@Bdimen=\dimen319
-\calc@Askip=\skip61
-\calc@Bskip=\skip62
-LaTeX Info: Redefining \setlength on input line 80.
-LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count361
-\calc@Cskip=\skip63
-)
-\g_MT_multlinerow_int=\count362
-\l_MT_multwidth_dim=\dimen320
-\origjot=\skip64
-\l_MT_shortvdotswithinadjustabove_dim=\dimen321
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen322
-\l_MT_above_intertext_sep=\dimen323
-\l_MT_below_intertext_sep=\dimen324
-\l_MT_above_shortintertext_sep=\dimen325
-\l_MT_below_shortintertext_sep=\dimen326
-\xmathstrut@box=\box116
-\xmathstrut@dim=\dimen327
-)
-\l_EQ_equationtype_int=\count363
-\l_EQ_alignmentmode_int=\count364
-\l_EQ_totalwidth_dim=\dimen328
-\l_EQ_displaywidth_dim=\dimen329
-\l_EQ_temp_linewidth_dim=\dimen330
-\l_EQ_linewidth_dim=\dimen331
-\EmphEqdelimitershortfall=\dimen332
-\EmphEqdelimiterfactor=\count365
-\g_EQ_toptag_height_dim=\dimen333
-\g_EQ_bottomtag_depth_dim=\dimen334
-\g_EQ_toprow_height_dim=\dimen335
-\g_EQ_bottomrow_depth_dim=\dimen336
-\g_EQ_widesttag_dim=\dimen337
-\EQ_mathdisplay_box=\box117
-\EQ_tag_box=\box118
-\g_EQ_temprow_int=\count366
 ) (c:/texlive/2022/texmf-dist/tex/latex/mnsymbol/MnSymbol.sty
 Package: MnSymbol 2007/01/21 v1.4 support for the MnSymbol font
  (c:/texlive/2022/texmf-dist/tex/latex/base/textcomp.sty
@@ -837,46 +790,46 @@ Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
 \t@pgfplots@toka=\toks44
 \t@pgfplots@tokb=\toks45
 \t@pgfplots@tokc=\toks46
-\pgfplots@tmpa=\dimen338
-\c@pgfplots@coordindex=\count367
-\c@pgfplots@scanlineindex=\count368
+\pgfplots@tmpa=\dimen318
+\c@pgfplots@coordindex=\count359
+\c@pgfplots@scanlineindex=\count360
  (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.tex)) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_loader.code.tex
 Package pgfplots: loading complementary utilities for your pgf version...
 \t@pgf@toka=\toks47
 \t@pgf@tokb=\toks48
 \t@pgf@tokc=\toks49
 (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgfutil-common-lists.tex)) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructureext.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray.code.tex
-\c@pgfplotsarray@tmp=\count369
+\c@pgfplotsarray@tmp=\count361
 ) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatrix.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.code.tex
-\c@pgfplotstable@counta=\count370
+\c@pgfplotstable@counta=\count362
 \t@pgfplotstable@a=\toks50
 ) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.tex (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.code.tex)) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfshading.code.tex
-\c@pgfplotslibrarysurf@no=\count371
+\c@pgfplotslibrarysurf@no=\count363
  (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.pgfsys-pdftex.def))) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.tex (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex)) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.tex (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.code.tex (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.tex))) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex) (c:/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex (c:/texlive/2022/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
-\pgfdecoratedcompleteddistance=\dimen339
-\pgfdecoratedremainingdistance=\dimen340
-\pgfdecoratedinputsegmentcompleteddistance=\dimen341
-\pgfdecoratedinputsegmentremainingdistance=\dimen342
-\pgf@decorate@distancetomove=\dimen343
-\pgf@decorate@repeatstate=\count372
-\pgfdecorationsegmentamplitude=\dimen344
-\pgfdecorationsegmentlength=\dimen345
+\pgfdecoratedcompleteddistance=\dimen319
+\pgfdecoratedremainingdistance=\dimen320
+\pgfdecoratedinputsegmentcompleteddistance=\dimen321
+\pgfdecoratedinputsegmentremainingdistance=\dimen322
+\pgf@decorate@distancetomove=\dimen323
+\pgf@decorate@repeatstate=\count364
+\pgfdecorationsegmentamplitude=\dimen324
+\pgfdecorationsegmentlength=\dimen325
 )
-\tikz@lib@dec@box=\box119
+\tikz@lib@dec@box=\box116
 ) (c:/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex (c:/texlive/2022/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex)) (c:/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex (c:/texlive/2022/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathreplacing.code.tex)) (c:/texlive/2022/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.contourlua.code.tex)
-\pgfplots@numplots=\count373
-\pgfplots@xmin@reg=\dimen346
-\pgfplots@xmax@reg=\dimen347
-\pgfplots@ymin@reg=\dimen348
-\pgfplots@ymax@reg=\dimen349
-\pgfplots@zmin@reg=\dimen350
-\pgfplots@zmax@reg=\dimen351
+\pgfplots@numplots=\count365
+\pgfplots@xmin@reg=\dimen326
+\pgfplots@xmax@reg=\dimen327
+\pgfplots@ymin@reg=\dimen328
+\pgfplots@ymax@reg=\dimen329
+\pgfplots@zmin@reg=\dimen330
+\pgfplots@zmax@reg=\dimen331
 ) (c:/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryplotmarks.code.tex
 File: tikzlibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
  (c:/texlive/2022/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
 File: pgflibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )))
-\c@testexample=\count374
+\c@testexample=\count366
  (c:/texlive/2022/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
 Package: tcolorbox 2023/02/12 version 6.0.1 text color boxes
  (c:/texlive/2022/texmf-dist/tex/latex/tools/verbatim.sty
@@ -889,23 +842,23 @@ Package: environ 2014/05/04 v0.3 A new way to define environments
  (c:/texlive/2022/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
-\tcb@titlebox=\box120
-\tcb@upperbox=\box121
-\tcb@lowerbox=\box122
-\tcb@phantombox=\box123
-\c@tcbbreakpart=\count375
-\c@tcblayer=\count376
-\c@tcolorbox@number=\count377
+\tcb@titlebox=\box117
+\tcb@upperbox=\box118
+\tcb@lowerbox=\box119
+\tcb@phantombox=\box120
+\c@tcbbreakpart=\count367
+\c@tcblayer=\count368
+\c@tcolorbox@number=\count369
+\tcb@temp=\box121
+\tcb@temp=\box122
+\tcb@temp=\box123
 \tcb@temp=\box124
-\tcb@temp=\box125
-\tcb@temp=\box126
-\tcb@temp=\box127
  (c:/texlive/2022/texmf-dist/tex/latex/tcolorbox/tcbraster.code.tex
 Library (tcolorbox): 'tcbraster.code.tex' version '6.0.1'
-\c@tcbrastercolumn=\count378
-\c@tcbrasterrow=\count379
-\c@tcbrasternum=\count380
-\c@tcbraster=\count381
+\c@tcbrastercolumn=\count370
+\c@tcbrasterrow=\count371
+\c@tcbrasternum=\count372
+\c@tcbraster=\count373
 ) (c:/texlive/2022/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
 Library (tcolorbox): 'tcbskins.code.tex' version '6.0.1'
 (c:/texlive/2022/texmf-dist/tex/latex/tikzfill/tikzfill.image.sty
@@ -914,7 +867,7 @@ Package: tikzfill.image 2022/07/20 v1.0.0 Image filling library for TikZ
 Package: tikzfill-common 2022/07/20 v1.0.0 Auxiliary code for tikzfill
 ) (c:/texlive/2022/texmf-dist/tex/latex/tikzfill/tikzlibraryfill.image.code.tex
 File: tikzlibraryfill.image.code.tex 2022/07/20 v1.0.0 Image filling library
-\l__tikzfill_img_box=\box128
+\l__tikzfill_img_box=\box125
 )) (c:/texlive/2022/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
 Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.0.1'
 )) (c:/texlive/2022/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
@@ -923,41 +876,41 @@ Library (tcolorbox): 'tcbbreakable.code.tex' version '6.0.1'
 Package: pdfcol 2022-09-21 v1.7 Handle new color stacks for pdfTeX (HO)
 )
 Package pdfcol Info: New color stack `tcb@breakable' = 1 on input line 23.
-\tcb@testbox=\box129
-\tcb@totalupperbox=\box130
-\tcb@totallowerbox=\box131
+\tcb@testbox=\box126
+\tcb@totalupperbox=\box127
+\tcb@totallowerbox=\box128
 ) (c:/texlive/2022/texmf-dist/tex/latex/tcolorbox/tcbhooks.code.tex
 Library (tcolorbox): 'tcbhooks.code.tex' version '6.0.1'
 ) (c:/texlive/2022/texmf-dist/tex/latex/tcolorbox/tcbtheorems.code.tex
 Library (tcolorbox): 'tcbtheorems.code.tex' version '6.0.1'
 ) (c:/texlive/2022/texmf-dist/tex/latex/tcolorbox/tcbfitting.code.tex
 Library (tcolorbox): 'tcbfitting.code.tex' version '6.0.1'
-\tcbfitdim=\dimen352
-\tcb@lowerfitdim=\dimen353
-\tcb@upperfitdim=\dimen354
-\tcb@cur@hbadness=\count382
+\tcbfitdim=\dimen332
+\tcb@lowerfitdim=\dimen333
+\tcb@upperfitdim=\dimen334
+\tcb@cur@hbadness=\count374
 ) (c:/texlive/2022/texmf-dist/tex/latex/tcolorbox/tcblistingsutf8.code.tex
 Library (tcolorbox): 'tcblistingsutf8.code.tex' version '6.0.1'
 (c:/texlive/2022/texmf-dist/tex/latex/tcolorbox/tcblistings.code.tex
 Library (tcolorbox): 'tcblistings.code.tex' version '6.0.1'
 (c:/texlive/2022/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count383
-\lst@gtempboxa=\box132
+\lst@mode=\count375
+\lst@gtempboxa=\box129
 \lst@token=\toks53
-\lst@length=\count384
-\lst@currlwidth=\dimen355
-\lst@column=\count385
-\lst@pos=\count386
-\lst@lostspace=\dimen356
-\lst@width=\dimen357
-\lst@newlines=\count387
-\lst@lineno=\count388
-\lst@maxwidth=\dimen358
+\lst@length=\count376
+\lst@currlwidth=\dimen335
+\lst@column=\count377
+\lst@pos=\count378
+\lst@lostspace=\dimen336
+\lst@width=\dimen337
+\lst@newlines=\count379
+\lst@lineno=\count380
+\lst@maxwidth=\dimen338
  (c:/texlive/2022/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
-\c@lstnumber=\count389
-\lst@skipnumbers=\count390
-\lst@framebox=\box133
+\c@lstnumber=\count381
+\lst@skipnumbers=\count382
+\lst@framebox=\box130
 ) (c:/texlive/2022/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2023/02/27 1.9 listings configuration
 ))
@@ -970,7 +923,7 @@ Library (tcolorbox): 'tcbprocessing.code.tex' version '6.0.1'
 Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
 Package shellesc Info: Restricted shell escape enabled on input line 77.
 ))
-\c@tcblisting=\count391
+\c@tcblisting=\count383
 )) (c:/texlive/2022/texmf-dist/tex/latex/listingsutf8/listingsutf8.sty
 Package: listingsutf8 2019-12-10 v1.5 Allow UTF-8 in listings input (HO)
  (c:/texlive/2022/texmf-dist/tex/generic/stringenc/stringenc.sty
@@ -994,14 +947,14 @@ Package: amsthm 2020/05/29 v2.20.6
 \thm@headfont=\toks56
 \thm@notefont=\toks57
 \thm@headpunct=\toks58
-\thm@preskip=\skip65
-\thm@postskip=\skip66
-\thm@headsep=\skip67
+\thm@preskip=\skip61
+\thm@postskip=\skip62
+\thm@headsep=\skip63
 \dth@everypar=\toks59
 ) (c:/texlive/2022/texmf-dist/tex/latex/thmtools/thmtools.sty
 Package: thmtools 2023/02/17 v0.75
 \thmt@toks=\toks60
-\c@thmt@dummyctr=\count392
+\c@thmt@dummyctr=\count384
  (c:/texlive/2022/texmf-dist/tex/latex/thmtools/thm-patch.sty
 Package: thm-patch 2023/02/17 v0.75
  (c:/texlive/2022/texmf-dist/tex/latex/thmtools/parseargs.sty
@@ -1023,27 +976,27 @@ Package: thm-restate 2023/02/17 v0.75
 Package: thm-amsthm 2023/02/17 v0.75
 \thmt@style@headstyle=\toks62
 ))
-\c@definition=\count393
-\c@teorema=\count394
+\c@definition=\count385
+\c@teorema=\count386
  (c:/texlive/2022/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2021/07/05 v2.14 Sectioning titles
-\ttl@box=\box134
-\beforetitleunit=\skip68
-\aftertitleunit=\skip69
-\ttl@plus=\dimen359
-\ttl@minus=\dimen360
+\ttl@box=\box131
+\beforetitleunit=\skip64
+\aftertitleunit=\skip65
+\ttl@plus=\dimen339
+\ttl@minus=\dimen340
 \ttl@toksa=\toks63
-\titlewidth=\dimen361
-\titlewidthlast=\dimen362
-\titlewidthfirst=\dimen363
+\titlewidth=\dimen341
+\titlewidthlast=\dimen342
+\titlewidthfirst=\dimen343
 ) (c:/texlive/2022/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
-\labelindent=\skip70
-\enit@outerparindent=\dimen364
+\labelindent=\skip66
+\enit@outerparindent=\dimen344
 \enit@toks=\toks64
-\enit@inbox=\box135
-\enit@count@id=\count395
-\enitdp@description=\count396
+\enit@inbox=\box132
+\enit@count@id=\count387
+\enitdp@description=\count388
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
@@ -1052,24 +1005,24 @@ Package csquotes Info: Redefining alias 'default' -> 'english'.
  (./ApuntesCM.aux (./Contenido.aux))
 \openout1 = `ApuntesCM.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 230.
-LaTeX Font Info:    ... okay on input line 230.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 230.
-LaTeX Font Info:    ... okay on input line 230.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 230.
-LaTeX Font Info:    ... okay on input line 230.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 230.
-LaTeX Font Info:    ... okay on input line 230.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 230.
-LaTeX Font Info:    ... okay on input line 230.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 230.
-LaTeX Font Info:    ... okay on input line 230.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 230.
-LaTeX Font Info:    ... okay on input line 230.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 230.
-LaTeX Font Info:    ... okay on input line 230.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 230.
-LaTeX Font Info:    ... okay on input line 230.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 228.
+LaTeX Font Info:    ... okay on input line 228.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 228.
+LaTeX Font Info:    ... okay on input line 228.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 228.
+LaTeX Font Info:    ... okay on input line 228.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 228.
+LaTeX Font Info:    ... okay on input line 228.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 228.
+LaTeX Font Info:    ... okay on input line 228.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 228.
+LaTeX Font Info:    ... okay on input line 228.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 228.
+LaTeX Font Info:    ... okay on input line 228.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 228.
+LaTeX Font Info:    ... okay on input line 228.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 228.
+LaTeX Font Info:    ... okay on input line 228.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1107,16 +1060,16 @@ LaTeX Font Info:    ... okay on input line 230.
 
 (c:/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count397
-\scratchdimen=\dimen365
-\scratchbox=\box136
-\nofMPsegments=\count398
-\nofMParguments=\count399
+\scratchcounter=\count389
+\scratchdimen=\dimen345
+\scratchbox=\box133
+\nofMPsegments=\count390
+\nofMParguments=\count391
 \everyMPshowfont=\toks65
-\MPscratchCnt=\count400
-\MPscratchDim=\dimen366
-\MPnumerator=\count401
-\makeMPintoPDFobject=\count402
+\MPscratchCnt=\count392
+\MPscratchDim=\dimen346
+\MPnumerator=\count393
+\makeMPintoPDFobject=\count394
 \everyMPtoPDFconversion=\toks66
 ) (c:/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1129,23 +1082,23 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring ON on input line 230.
+Package hyperref Info: Link coloring ON on input line 228.
 
 Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-\c@lstlisting=\count403
-LaTeX Font Info:    Trying to load font information for U+msa on input line 239.
+\c@lstlisting=\count395
+LaTeX Font Info:    Trying to load font information for U+msa on input line 237.
 (c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 239.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 237.
  (c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 <C:/Users/mique/OneDrive/Universidad/8vo Cuatri/Control Moderno/Apuntes Tex/git/imagenes/uns_logo.jpg, id=43, 933.4875pt x 895.345pt>
 File: C:/Users/mique/OneDrive/Universidad/8vo Cuatri/Control Moderno/Apuntes Tex/git/imagenes/uns_logo.jpg Graphic file (type jpg)
 <use C:/Users/mique/OneDrive/Universidad/8vo Cuatri/Control Moderno/Apuntes Tex/git/imagenes/uns_logo.jpg>
-Package pdftex.def Info: C:/Users/mique/OneDrive/Universidad/8vo Cuatri/Control Moderno/Apuntes Tex/git/imagenes/uns_logo.jpg  used on input line 240.
+Package pdftex.def Info: C:/Users/mique/OneDrive/Universidad/8vo Cuatri/Control Moderno/Apuntes Tex/git/imagenes/uns_logo.jpg  used on input line 238.
 (pdftex.def)             Requested size: 199.16928pt x 191.01994pt.
  [1
 
@@ -1171,20 +1124,50 @@ Overfull \hbox (56.22229pt too wide) in paragraph at lines 443--444
 [][]  
  []
 
-) [7] (./ApuntesCM.aux (./Contenido.aux)) ) 
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 494--497
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 498--501
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 498--501
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 498--501
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 498--501
+
+ []
+
+[8]
+Overfull \hbox (37.68777pt too wide) detected at line 653
+\OML/cmm/b/it/12 A[] \U/MnSymbolD/m/n/12 ^^@ []|  \OML/cmm/b/it/12 b[] \U/MnSymbolD/m/n/12 ^^@ []|  \OML/cmm/b/it/12 c [] o \U/MnSymbolD/m/n/12 ^^@ []|  \OML/cmm/b/it/12 d[] \U/MnSymbolD/m/n/12 ^^@ \OML/cmm/m/it/12 b[]
+ []
+
+) [9] (./ApuntesCM.aux (./Contenido.aux)) ) 
 Here is how much of TeX's memory you used:
- 63291 strings out of 476024
- 1549112 string characters out of 5794016
- 2298452 words of memory out of 5000000
- 82815 multiletter control sequences out of 15000+600000
- 534110 words of font info for 107 fonts, out of 8000000 for 9000
+ 62487 strings out of 476024
+ 1533714 string characters out of 5794016
+ 2288560 words of memory out of 5000000
+ 81996 multiletter control sequences out of 15000+600000
+ 539671 words of font info for 125 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,22n,96p,816b,2250s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{c:/texlive/2022/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolS.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolA.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on ApuntesCM.pdf (7 pages, 377650 bytes).
+ 99i,26n,96p,816b,2541s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{c:/texlive/2022/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolS.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolA.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol-Bold12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on ApuntesCM.pdf (9 pages, 419312 bytes).
 PDF statistics:
- 306 PDF objects out of 1000 (max. 8388607)
- 230 compressed objects within 3 object streams
- 85 named destinations out of 1000 (max. 500000)
- 226 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 344 PDF objects out of 1000 (max. 8388607)
+ 260 compressed objects within 3 object streams
+ 94 named destinations out of 1000 (max. 500000)
+ 242 words of extra memory for PDF output out of 10000 (max. 10000000)
 
