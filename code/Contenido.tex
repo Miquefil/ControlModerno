@@ -354,6 +354,136 @@ entonces podemos escribir (\ref*{eqn:camino}) como
 
 \end{example}
 
+\subsection{Forma Canónica de Jordan}
+Sea \( T: V \rightarrow V\), si el polinomio característico de $T$ se factoriza completamente
+existe una base donde la transformación lineal viene dada por una matriz de "m bloques" $(m<n)$ con la siguiente forma.
+\begin{equation*}
+    J = 
+    \begin{bmatrix}
+    \bm{A_1} & 0 & \cdots & 0\\
+    0 & \bm{A_2} & \cdots & 0\\
+    0 & 0 & \ddots & 0\\
+    0 & 0 & \cdots & \bm{A_m}\\
+    \end{bmatrix}
+\end{equation*}
+donde cada \(\bm{A_k}\) es un \textit{bloque de Jordan}. Estos tienen una dimensión de $m \times m$, 
+donde $m$ es la \textit{multiplicidad algebraica} del autovalor asociado.
+\begin{equation*}
+    \bm{A_k} = 
+    \begin{bmatrix}
+    \lambda_k & 1 & \cdots & 0 & 0\\
+    0 & \lambda_k & 1 & \cdots & 0\\
+    \vdots & \vdots & \vdots & \ddots & \vdots\\
+    0 & 0 & 0 & \cdots & \lambda_k\\
+    \end{bmatrix}
+\end{equation*}
+
+luego cada autovector generalizado lo podemos generar con la siguiente regla.
+Sea A una matriz genérica de $n \times n$, entonces el i-esimo autovector generalizado puede ser escrito como:
+\begin{equation*}
+    \begin{cases}
+        A \bm{v_1} &= \lambda \bm{v_1} \\
+        A \bm{v_i} &= v_{i-1} + \lambda \bm{v_i}, \; \; i>1
+    \end{cases}
+\end{equation*}
+\begin{example}
+    Supongamos que se quiere diagonalizar la siguiente matriz
+    \begin{equation*}
+        A =
+        \begin{bmatrix}
+        1 & -2 & 1\\
+        0 & -1 & 0\\
+        -1 & 1 & 3\\
+        \end{bmatrix}
+    \end{equation*}
+    luego su polinomio característico es \( p(\lambda) = (\lambda+1)(\lambda-2)^2 \), es decir sus
+    autovalores son -1 y 2. Ahora buscamos los espacios propios asociados a cada autovalor
+    \begin{equation*}
+        A + I = \begin{bmatrix}
+        2 & -2 & 1\\
+        0 & 0 & 0\\
+        -1 & 1 & 4\\
+        \end{bmatrix}
+        ~ \begin{bmatrix}
+        -1 & 1 & 0\\
+        0 & 0 & 1\\
+        0 & 0 & 0\\
+        \end{bmatrix}
+        \rightarrow 
+        \begin{cases}
+            y &= x \\
+            z &= 0 \\
+        \end{cases}
+    \end{equation*}
+    es decir el primer espacio propio es \( E_{\lambda=-1} = \{(x,x,0): x \in \mathbb{R}  \}\).
+    \begin{equation*}
+        A - 2I = \begin{bmatrix}
+        -1 & -2 & 1\\
+        0 & -3 & 0\\
+        -1 & 1 & 1\\
+        \end{bmatrix}
+        ~ \begin{bmatrix}
+        -1 & 0 & 1\\
+        0 & 0 & 0\\
+        0 & 0 & 0\\
+        \end{bmatrix}
+        \rightarrow 
+        \begin{cases}
+            z &= x \\
+            y &= 0 \\
+        \end{cases}
+    \end{equation*}
+
+    obteniendo el último espacio propio como \( E_{\lambda=2}  = \{(x,0,x): x \in \mathbb{R}  \}\).
+    Como vemos el espacio propio de \(\lambda = 2\) tiene una dimensión menor a su multiplicidad algebraica, por lo que 
+    no podría ser diagonalizable. Sin embargo Jordan nos proporciona una manera de encontrar una matriz de transformación \(A\) que 
+    aunque no es diagonal, cumple la propiedad de ser triangular.
+
+    Para esto Jordan nos dice que debemos encontrar un tercer vector, linealmente independiente a los vectores encontrados
+    en los espacios propios. Lo hacemos con la regla ya mencionada, 
+    \begin{equation*}
+        (A-\lambda I)\bm{v_2} = v_2
+        A - 2I = 
+        \begin{bmatrix}
+        -1 & -2 & 1\\
+        0 & -3 & 0\\
+        -1 & 1 & 1\\
+        \end{bmatrix}
+        \begin{bmatrix}
+        x \\
+        y\\
+        z\\
+        \end{bmatrix} = 
+        \begin{bmatrix}
+            1\\
+            0\\
+            1\\
+        \end{bmatrix}
+        \rightarrow 
+        \begin{cases}
+            z &= 1+x \\
+            y &= 0 \\
+        \end{cases}
+        \rightarrow
+        \bm{v_2} = [1, 0, 2]
+    \end{equation*}
+    luego la matriz de similaridad P / $ J = P A P^{-1}$ queda definida como
+    \begin{equation*}
+        P = \begin{bmatrix}
+        1 & 1 & 1\\
+        1 & 0 & 0\\
+        0 & 1 & 2\\
+        \end{bmatrix}%
+        , J = \begin{bmatrix}
+        -1 & 0 & 0\\
+        0 & 2 & 1\\
+        0 & 0 & 2\\
+        \end{bmatrix}
+    \end{equation*}
+
+\end{example}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 \section{Espacio de estados y modelos de función transferencia}
 
@@ -703,6 +833,8 @@ suponiendo que \( u^{k}(0^{-})=0 \) entonces podemos plantear que,
         y^{(n-1)}(0^{-}) &= \bm{c} \bm{A} \bm{x^{(n-2)}}(0^{-}) + d u^{(n-1)}(0^{-}) = \bm{c} \bm{A} \bm{x^{(n-1)}}(0^{-}) \\
     \end{split}
 \end{equation*}
+
+
 
 
 
