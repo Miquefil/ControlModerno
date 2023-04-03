@@ -159,7 +159,7 @@ la forma ($m \cdot n$).
     \end{enumerate}
 \end{definition}
 
-\subsection{Transformación Lineal}
+\subsection{Transformación Lineal}\label{sec: trafoLineal}
 Queremos enconrtar una matriz $A$ que al multiplicarla por las coordenadas de un
 vector $\bm{v}$ en la base $B_1$ ([$\bm{v}]_{B1}$) de como resultado el transformado de
 dicho vector escrito en base $B_2$. Es decir:
@@ -542,7 +542,7 @@ de los polos en el plano "z".
     \end{figure}
 \end{example}
 
-\subsection{Forma Canónica Observable}
+\subsection{Formas Canónicas}
 En esta sección vamos a buscar las matrices de control estándar para una ecuación
 diferencial general, que puede contemplar distintos aspectos respecto a su forma de construirse. 
 Para esta subsección los resultados están paraemtrizados tanto para sistemas continuos, como para sistemas discretos
@@ -578,7 +578,8 @@ En el caso general las ecuaciones de estado se describen como
         \; y[k] &= \bm{c} \;\bm{x}[k] + \bm{d} \; u[k] \\
     \end{cases}
 \end{equation}
-luego podemos plantear las siguientes matrices de estados, llamadas \underline{\textbf{de observabilidad}} (anotado con un sub-cero).
+luego podemos plantear las siguientes matrices de estados, llamadas canónicas.
+\subsubsection*{Forma Canónica de Observabilidad}
 \begin{equation*}
     \bm{A_o} = 
     \begin{bmatrix}
@@ -607,7 +608,8 @@ luego podemos plantear las siguientes matrices de estados, llamadas \underline{\
     \bm{d_o} = b_0
 \end{equation*}
 
-o en su \underline{\textbf{forma canónica de controlabilidad}}
+
+\subsubsection*{Forma Canónica de Controlabilidad}
 \begin{equation*}
     \bm{A_c} = 
     \begin{bmatrix}
@@ -637,8 +639,70 @@ o en su \underline{\textbf{forma canónica de controlabilidad}}
 \end{equation*}
 
 
+\begin{example}
+    Podemos escribir la función transferencia discreta,
+    \begin{equation*}
+        H(z) = \dfrac{2 z + 4 z + 4}{z^2 + 2 z},
+    \end{equation*}
+    observando que \( b_0 = 2, b_1, b_2 = 4, a_1=2, a_2=0\). Por lo tanto,
+    \begin{equation*}
+        \bm{\dot{x}}[k+1] = 
+        \begin{bmatrix}
+        -2 & 1\\
+        0 & 0\\
+        \end{bmatrix}
+        \bm{x} +
+        \begin{bmatrix}
+        0 \\
+        4 \\
+        \end{bmatrix}
+        u[k]
+    \end{equation*}
+    \begin{equation*}
+        y[k] = \begin{bmatrix}
+        1 & 0 \\
+        \end{bmatrix}
+        \bm{x}[k]
+        + 2 u[k]
+    \end{equation*}
+\end{example}
 
+\subsection{Transformaciones de Canon}
+Si aplicamos la teoría de la sección () entonces podemos transformar
+las matrices de control planteando
+\begin{equation*}
+    \bm{\bar{x}} = \bm{T} \bm{x} \; \; \text{o también} \; \;\bm{x} = \bm{T^{-1}} \bm{\bar{x}}
+\end{equation*}
+desde donde podemos demostrar que
+\begin{equation*}
+    \begin{split}
+        \bm{\bar{A}} &= \bm{T} \bm{A} \bm{T^{-1}} \\
+        \bm{\bar{b}} &= \bm{T} \bm{b} \\
+        \bm{\bar{c}} &= \bm{c} \bm{T^{-1}} \\
+        \bar{b} &= b
+    \end{split}
+\end{equation*}
 
+\subsection{Condiciones Iniciales}
+Queremos aproximar al vector de condiciones iniciales, es decir, queremos
+conocer el valor de cada variable de estado en un inicio del sistema.
+Para esto volvamos al sistema,
+\begin{equation*}
+    \begin{cases}
+        \; \dot{\bm{x}} &= \bm{A} \; \bm{x} + \bm{b} \; u(t) \\
+        \; y(t) &= \bm{c} \;\bm{x} + \bm{d} \; u(t) \\
+    \end{cases}%
+\end{equation*}
+suponiendo que \( u^{k}(0^{-})=0 \) entonces podemos plantear que,
+\begin{equation*}
+    \begin{split}
+        y(0^{-}) &= \bm{c} \bm{x}(0^{-}) + d u(0^{-}) = \bm{c} \bm{x}(0^{-}) \\
+        y^{(1)}(0^{-}) &= \bm{c} \bm{x^{(1)}}(0^{-}) + d u^{(1)}(0^{-}) = \bm{c} \bm{x^{(1)}}(0^{-}) \\
+        y^{(2)}(0^{-}) &= \bm{c} \bm{A} \bm{x^{(2)}}(0^{-}) + d u^{(2)}(0^{-}) = \bm{c} \bm{A} \bm{x^{(2)}}(0^{-}) \\
+        \vdots &= \vdots \\
+        y^{(n-1)}(0^{-}) &= \bm{c} \bm{A} \bm{x^{(n-2)}}(0^{-}) + d u^{(n-1)}(0^{-}) = \bm{c} \bm{A} \bm{x^{(n-1)}}(0^{-}) \\
+    \end{split}
+\end{equation*}
 
 
 
