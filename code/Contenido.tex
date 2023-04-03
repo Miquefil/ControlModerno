@@ -545,6 +545,25 @@ de los polos en el plano "z".
 \subsection{Forma Canónica Observable}
 En esta sección vamos a buscar las matrices de control estándar para una ecuación
 diferencial general, que puede contemplar distintos aspectos respecto a su forma de construirse. 
+Para esta subsección los resultados están paraemtrizados tanto para sistemas continuos, como para sistemas discretos
+con las siguientes ecuaciones diferenciales (o a diferencias): 
+
+
+\begin{equation*}
+    \begin{split}
+        \text{\textbf{\underline{Caso continuo:}}} \; \; \boxed{y^{(n)}(t) + a_1 y^{(n-1)}(t) + \cdots + a_n y(t) = b_0 u^{n}(t) + b_1 u^{(n-1)}(t) + \cdots + b_n u(t)}      \\
+        \text{\textbf{\underline{Caso discreto:}}} \; \; \boxed{y[k] + a_1 y[k-1] + \cdots + a_n y[k-n] = b_0 u[k] + \cdots + b_n u[k-n]}  \\
+    \end{split}
+\end{equation*}
+
+Cuyas funciones transferencia son
+\begin{equation*}
+    \begin{split}
+        H(s) = \dfrac{Y(s)}{U(s)} = \dfrac{b_0 s^n + b_1 s^{n-1} + \cdots + b_n}{s^n + a_1 s^{n-1} + \cdots + a_n} \\
+        H(z) = \dfrac{Y(z)}{U(z)} = \dfrac{b_0 + b_1 z^{-1} + \cdots + b_n z^{-n}}{1 + a_1 z^{-1} + \cdots + a_n z^{-n}} \\
+    \end{split} 
+\end{equation*}
+
 En el caso general las ecuaciones de estado se describen como
 \begin{equation}
     \text{\underline{Caso Contínuo:}}
@@ -559,15 +578,7 @@ En el caso general las ecuaciones de estado se describen como
         \; y[k] &= \bm{c} \;\bm{x}[k] + \bm{d} \; u[k] \\
     \end{cases}
 \end{equation}
-Si partimos de la ecuación diferencial
-\begin{equation*}
-    y^{(n)}(t) + a_1 y^{(n-1)}(t) + \cdots + a_n y(t) = b_0 u^{n}(t) + b_1 u^{(n-1)}(t) + \cdots + b_n u(t)
-\end{equation*}
-cuya función de transferencia es
-\begin{equation*}
-    H(s) = \dfrac{Y(s)}{U(s)} = \dfrac{b_0 s^n + b_1 s^{n-1} + \cdots + b_n}{s^n + a_1 s^{n-1} + \cdots + a_n}
-\end{equation*}
-tiene las siguientes matrices de estados, llamadas \textbf{de observabilidad} (anotado con un sub-cero).
+luego podemos plantear las siguientes matrices de estados, llamadas \underline{\textbf{de observabilidad}} (anotado con un sub-cero).
 \begin{equation*}
     \bm{A_o} = 
     \begin{bmatrix}
@@ -596,36 +607,9 @@ tiene las siguientes matrices de estados, llamadas \textbf{de observabilidad} (a
     \bm{d_o} = b_0
 \end{equation*}
 
-\subsection{Forma Canónica de Controlabilidad}
-Sea la ecuación a diferencias que \textit{no tiene retardos de la entrada}, se puede
-representar de la siguiente forma
-\begin{equation}
-    w[k]  = a_1 w[k-1] - a_2 w[k-2] \cdots a_n w[k-n] + u[k]
-\end{equation}
-
-su transformada $\mathcal{Z}$ es
+o en su \underline{\textbf{forma canónica de controlabilidad}}
 \begin{equation*}
-    \dfrac{W(z)}{U(z)} = \dfrac{1}{1 + a_1 z^{-1} + \cdots + a_n z^{-n}} = \dfrac{1}{A(z)}
-\end{equation*}
-
-luego recordemos la ecuación a diferencias más general
-\begin{equation*}
-    y[k] + a_1 y[k-1] + \cdots + a_n y[k-n] = b_0 u[k] + \cdots + b_n u[k-n]
-\end{equation*}
-
-que tiene como ecuación transformada
-
-\begin{equation*}
-    \dfrac{Y(z)}{U(z)} = \dfrac{b_0 + b_1 z^{-1} + \cdots + b_n z^{-n}}{1 + a_1 z^{-1} + \cdots + a_n z^{-n}} = \dfrac{B(z)}{A(z)} 
-\end{equation*}
-
-\begin{obs}
-    La ecuación diferencial general que se plantea en la forma canónica de controlabilidad
-    y aquella en la forma canónica de observabilidad tienen los indices de los coeficientes invertidos.
-\end{obs}
-que resultan en las siguientes matrices de control
-\begin{equation*}
-    \bm{A_o} = 
+    \bm{A_c} = 
     \begin{bmatrix}
     -a_1 & -a_2 & -a_3 & \cdots & -a_{n-1} & -a_n\\
     1 & 0 & 1 & 0 & \cdots & 0\\
@@ -635,7 +619,7 @@ que resultan en las siguientes matrices de control
     0 & 0 & 0 & \cdots & 1 & 0 \\
     \end{bmatrix}
     \hspace*{10pt}
-    \bm{b_o} = 
+    \bm{b_c} = 
     \begin{bmatrix}
     1 \\
     0 \\
@@ -644,12 +628,12 @@ que resultan en las siguientes matrices de control
     0\\
     \end{bmatrix}
     \hspace*{5pt}
-    \bm{c:o} = 
+    \bm{c_c} = 
     \begin{bmatrix}
     b_1 - a_1\; b_0 & b_2 - a_2\; b_0 & \cdots & b_n - a_n\; b_0
     \end{bmatrix}
     \hspace*{5pt}
-    \bm{d_o} = b_0
+    \bm{d_c} = b_0
 \end{equation*}
 
 
