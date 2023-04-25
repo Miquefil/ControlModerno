@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.12)  3 APR 2023 00:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.12)  18 APR 2023 09:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1153,7 +1153,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 628--631
  []
 
 [9]
-Overfull \hbox (25.08473pt too wide) detected at line 769
+Overfull \hbox (25.08473pt too wide) detected at line 770
 \OML/cmm/b/it/12 A[] \U/MnSymbolD/m/n/12 ^^@ []|  \OML/cmm/b/it/12 b[] \U/MnSymbolD/m/n/12 ^^@ []|  \OML/cmm/b/it/12 c[] \U/MnSymbolD/m/n/12 ^^@ []|  \OML/cmm/b/it/12 d[] \U/MnSymbolD/m/n/12 ^^@ \OML/cmm/m/it/12 b[]
  []
 
@@ -1161,7 +1161,7 @@ Overfull \hbox (25.08473pt too wide) detected at line 769
 Here is how much of TeX's memory you used:
  62503 strings out of 476024
  1533906 string characters out of 5794016
- 2289635 words of memory out of 5000000
+ 2290637 words of memory out of 5000000
  82008 multiletter control sequences out of 15000+600000
  539671 words of font info for 125 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
