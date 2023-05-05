@@ -814,26 +814,9 @@ desde donde podemos demostrar que
     \end{split}
 \end{equation*}
 
-\subsection{Condiciones Iniciales}
-Queremos aproximar al vector de condiciones iniciales, es decir, queremos
-conocer el valor de cada variable de estado en un inicio del sistema.
-Para esto volvamos al sistema,
-\begin{equation*}
-    \begin{cases}
-        \; \dot{\bm{x}} &= \bm{A} \; \bm{x} + \bm{b} \; u(t) \\
-        \; y(t) &= \bm{c} \;\bm{x} + \bm{d} \; u(t) \\
-    \end{cases}%
-\end{equation*}
-suponiendo que \( u^{k}(0^{-})=0 \) entonces podemos plantear que,
-\begin{equation*}
-    \begin{split}
-        y(0^{-}) &= \bm{c} \bm{x}(0^{-}) + d u(0^{-}) = \bm{c} \bm{x}(0^{-}) \\
-        y^{(1)}(0^{-}) &= \bm{c} \bm{x^{(1)}}(0^{-}) + d u^{(1)}(0^{-}) = \bm{c} \bm{x^{(1)}}(0^{-}) \\
-        y^{(2)}(0^{-}) &= \bm{c} \bm{A} \bm{x^{(2)}}(0^{-}) + d u^{(2)}(0^{-}) = \bm{c} \bm{A} \bm{x^{(2)}}(0^{-}) \\
-        \vdots &= \vdots \\
-        y^{(n-1)}(0^{-}) &= \bm{c} \bm{A} \bm{x^{(n-2)}}(0^{-}) + d u^{(n-1)}(0^{-}) = \bm{c} \bm{A} \bm{x^{(n-1)}}(0^{-}) \\
-    \end{split}
-\end{equation*}
+
+\section*{Matriz de transición de estados}
+Volviendo al mismo sistema
 
 
 
